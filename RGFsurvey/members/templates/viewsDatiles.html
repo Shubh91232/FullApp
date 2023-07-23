@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    {% comment %} <link rel="stylesheet" href="view_datile.css"> {% endcomment %}
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+        }
+        .main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .detailes{
+            width: 364px;
+            height: 718px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-shrink: 0;
+            justify-content: center;
+            align-items: center;
+        }
+        .treeImg_section{
+            width: 316px;
+            height: 207px;
+            border-radius: 11px;
+            border: 1px solid #F9F5F5;
+            background: #FFFEFE;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+        }
+        .treeImg_section img{
+            width: 360px;
+            height: 207px;
+        }
+        .Datile_Section{
+            width: 364px;
+            height: 487px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+            background: #FFF;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+        }
+        .SpecisName{
+            width: 93px;
+            height: 37px;
+            margin-bottom: 20px;    
+        }
+        .SpecisName h1{
+            color: #000;
+            font-family: Inter;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            
+        }
+        .TreeData{
+            color: #000;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .TreeData span{
+        
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="detailes">
+            <div class="treeImg_section">
+                <img src="https://2.bp.blogspot.com/-AXs-GohM_YU/WPxZrzxSh3I/AAAAAAAABWg/0-5AKDh1WJEQ4YllgfLibDh9lxW9yrwRwCLcB/s1600/7.JPG" alt="Tree">
+            </div>
+            <div class="Datile_Section">
+                <div class="SpecisName">
+                    <a href="https://www.google.com/search?q={{tree.TreeName}}+tree">
+                        <h1>{{tree.TreeName}}</h1>
+                    </a>
+                </div>
+                <div class="TreeData">
+                    <p>
+                        <span>Scientific Name :</span> {{tree.TreeDatile}}
+                        <br><br>
+                        <span>Location :</span>
+                        <br>
+                        26.952700833268345,<br>
+                        75.71046781349203
+                        <br><br>
+                        <span>Plantation Date :</span>
+                        <br>
+                        20-07-2022 Age : 30 years
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
